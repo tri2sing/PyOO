@@ -15,17 +15,12 @@ class Menu(object):
     '''
     __metaclass__ = abc.ABCMeta
 
-    def __init__(self):
+    def __init__(self, notebook=None, choices={}):
+        '''Initializes a menu with an empty notebook 
+        and the options available to work with it.
         '''
-        '''
-        self.notebook = Notebook()
-        self.choices = {
-            '1': self.show_notes,
-            '2': self.find_notes,
-            '3': self.add_new_note,
-            '4': self.modify_note,
-            '5': self.quit
-        }
+        self.notebook = notebook
+        self.choices = choices
         
     @abc.abstractmethod
     def display_menu(self):
@@ -52,8 +47,21 @@ class Menu(object):
     def modify_note(self):
         '''Modifies the text and tags for a note.
         '''
-        
+    
+    def run(self):
+        '''Display the menu and respond to choices
+        '''
+        while True:
+            choice = self.display_menu()
+            if choice in self.choices:
+                action = self.choices[choice]
+                print('\t{0} is a valid choice'.format(choice))
+                action()
+            else:
+                print('\t{0} is not a valid choice'.format(choice))
+            
     def quit(self):
         '''Exit from the notebook.
         '''
+        print('\tGoodbye!')
         sys.exit(0)
