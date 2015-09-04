@@ -48,6 +48,11 @@ class MenuCLI(Menu):
         '''Asks the user for a search pattern.
         Displays any matching note found.
         '''
+        search_string = input('\n\tEnter the string to search for: ')
+        matching_notes = self.notebook.search_notes(search_string)
+        print('\tThere are {0} notes matching the string "{1}":'.format(len(matching_notes), search_string))
+        for note in matching_notes:
+            print('\n\t{0}'.format(note))
         
     def add_new_note(self):
         '''Modifies the text and tags for a note.

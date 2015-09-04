@@ -67,7 +67,7 @@ class Notebook(object):
         note = self._find_note(note_id=note_id)  
         note.note_tags = note_tags
     
-    def find_notes(self, search_string):
+    def search_notes(self, search_string):
         '''Find all the notes that contain the search string
         '''
         return [note for note in self.notes_list if note.contains(search_string)]
@@ -81,6 +81,8 @@ class Notebook(object):
             result += '\n'
         return result
 
+    __repr__ = __str__
+    
 if __name__ == '__main__':
     nb = Notebook()
     nb.add_new_note('hello world', '')
@@ -91,7 +93,7 @@ if __name__ == '__main__':
         note_text = nb.get_note_text(note_id)
         print('Note = {0}, Text = {1}'.format(note_id, note_text))
 
-    notes = nb.find_notes('hello')
+    notes = nb.search_notes('hello')
     for note in notes:
         print(note.note_text)
 
