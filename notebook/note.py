@@ -36,7 +36,7 @@ class Note(object):
     def __str__(self):
         '''String representation of the object
         '''
-        return('Note {0}, Date = {1}, Text = {2}, Tags = {3}'
+        return('Note Id = {0}, Date = {1}, Text = {2}, Tags = {3}'
               .format(self.note_id, self.creation_date, self.note_text, self.note_tags))    
         
     __repr__ = __str__

@@ -65,6 +65,13 @@ class MenuCLI(Menu):
     def modify_note(self):
         '''Modifies the text and tags for a note.
         '''
+        note_id = int(input('\n\tEnter a note id: '))
+        note_text = input('\n\tEnter the text for the note: ')
+        note_tags = input('\tEnter tags for the note: ')
+        if note_text:
+            self.notebook.replace_note_text(note_id, note_text)
+        if note_tags:
+            self.notebook.replace_note_tags(note_id, note_tags)
 
 if __name__ == '__main__':
     menu_cli = MenuCLI()   
