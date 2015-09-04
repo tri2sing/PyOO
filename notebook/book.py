@@ -71,6 +71,15 @@ class Notebook(object):
         '''Find all the notes that contain the search string
         '''
         return [note for note in self.notes_list if note.contains(search_string)]
+    
+    def __str__(self):
+        '''Print the notebook
+        '''
+        result = ''
+        for note in self.notes_list:
+            result += str(note)
+            result += '\n'
+        return result
 
 if __name__ == '__main__':
     nb = Notebook()
@@ -91,3 +100,6 @@ if __name__ == '__main__':
     
     nb.replace_note_tags(1, 'message, greeting')
     print(nb.get_note_tags(1))
+    
+    print(64*'=')
+    print(nb)

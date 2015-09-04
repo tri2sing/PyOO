@@ -16,7 +16,7 @@ class MenuCLI(Menu):
         self.notebook = Notebook()
         self.choices = {
             '1': self.display_notes,
-            '2': self.find_notes,
+            '2': self.search_notes,
             '3': self.add_new_note,
             '4': self.modify_note,
             '5': self.quit
@@ -30,7 +30,7 @@ class MenuCLI(Menu):
         print('''
         Notebook Menu
         
-        1. Show Notes
+        1. Display Notes
         2. Search Notes
         3. Add Note
         4. Modify Note
@@ -38,11 +38,13 @@ class MenuCLI(Menu):
         ''')
         return input('\tEnter a choice: ')
         
-    def display_notes(self, notes=None):
+    def display_notes(self):
         '''Displays the notes to the user. 
         '''
+        for note in self.notebook.notes_list:
+            print('\n\t{0}'.format(note))
         
-    def find_notes(self):
+    def search_notes(self):
         '''Asks the user for a search pattern.
         Displays any matching note found.
         '''
@@ -50,12 +52,15 @@ class MenuCLI(Menu):
     def add_new_note(self):
         '''Modifies the text and tags for a note.
         '''
+        note_text = input('\n\tEnter the text for the note: ')
+        note_tags = input('\tEnter tags for the note: ')
+        self.notebook.add_new_note(note_text, note_tags)
+        print('\tNote has been added')
+        
     def modify_note(self):
         '''Modifies the text and tags for a note.
         '''
 
 if __name__ == '__main__':
     menu_cli = MenuCLI()   
-    print(menu_cli.notebook)
-    print(menu_cli.choices)
     menu_cli.run()

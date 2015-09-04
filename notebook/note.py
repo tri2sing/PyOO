@@ -32,7 +32,14 @@ class Note(object):
         The search is case-sensitive.
         '''
         return search_string in self.note_text or search_string in self.note_tags
+    
+    def __str__(self):
+        '''String representation of the object
+        '''
+        return('Note {0}, Date = {1}, Text = {2}, Tags = {3}'
+              .format(self.note_id, self.creation_date, self.note_text, self.note_tags))    
         
+    __repr__ = __str__
 
 if __name__ == '__main__':
     n1 = Note('first hello')

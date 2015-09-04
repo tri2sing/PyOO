@@ -29,12 +29,12 @@ class Menu(object):
         '''
         
     @abc.abstractmethod
-    def display_notes(self, notes=None):
+    def display_notes(self):
         '''Displays the notes to the user. 
         '''
         
     @abc.abstractmethod
-    def find_notes(self):
+    def search_notes(self):
         '''Asks the user for a search pattern.
         Displays any matching note found.
         '''
