@@ -38,11 +38,11 @@ class Authenticator (object):
             user = self.users[username]
         except KeyError:
             raise InvalidUsername(username)
-        if not user.check_password(username, password):
+        if not user.check_password(password):
             raise InvalidPassword(username)
-        user.is_logged_in = False
+        user.is_logged_in = True
         return True
 
 
-# Default authenticator; exists at the module level
+# Default authenticator defined at the module level
 authenticator = Authenticator()
