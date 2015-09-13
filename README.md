@@ -4,6 +4,12 @@ The goal of the changes is to learn by improving the example given, and not beca
 
 # Differences from the book
 This section provides some details about the core changes I made.
-* notebook package:
+* notebook package
   - Used inheritance in the menu class 
   - Used __str__ to display instance information
+* inheritance package
+  - Did not make any changes
+* polymorphism package
+  - Create independent module for different components
+* exception package
+  - Created independent modules for different components
