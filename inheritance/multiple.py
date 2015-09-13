@@ -44,6 +44,10 @@ print(bnaive.num_sub_calls, bnaive.num_left_calls, bnaive.num_right_calls, bnaiv
 
 # Second set of classes that handle the diamond problem.
 # The use of super() handles ordering of the common_method.
+# This solution works only when the arguments passed to the  
+# two superclass (Left and Right) from subclass (Bottom) are 
+# the same.  This solution breaks down in case if Bottom has  
+# to pass different arguments to Left and Right superclass.
 
 print(32*'=')
 print('Aware handling of the diamond problem')
