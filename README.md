@@ -4,12 +4,15 @@ The goal of the changes is to learn by improving the example given, and not beca
 
 # Differences from the book
 This section provides some details about the core changes I made.
+The list below is not in the order of implementation.
+* exception package
+  - Created independent modules for different components
+* inheritance package
+  - Did not make any changes
 * notebook package
   - Used inheritance in the menu class 
   - Used __str__ to display instance information
-* inheritance package
-  - Did not make any changes
 * polymorphism package
   - Create independent module for different components
-* exception package
-  - Created independent modules for different components
+* reuse
+  - Used abstract method in the inheritance version of reuse
