@@ -6,7 +6,7 @@ Created on Oct 10, 2015
 from pprint import PrettyPrinter
 
 # Example illustrating mixing keys in a dictionary
-# The keys can be any immutable type
+# The keys can be any hashable type
 
 randkeys = {}
 randkeys['astring'] = 'a string'
