@@ -16,3 +16,5 @@ The list below is not in the order of implementation.
   - Create independent module for different components
 * reuse
   - Used abstract method in the inheritance version of reuse
+* functions
+  - Added a type check to make sure the argument is callable
