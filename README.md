@@ -14,7 +14,7 @@ The list below is not in the order of implementation.
   - Used __str__ to display instance information
 * polymorphism package
   - Create independent module for different components
-* reuse
+* reuse package
   - Used abstract method in the inheritance version of reuse
-* functions
+* functions package
   - Added a type check to make sure the argument is callable
