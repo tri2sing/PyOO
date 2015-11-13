@@ -18,3 +18,5 @@ The list below is not in the order of implementation.
   - Used abstract method in the inheritance version of reuse
 * functions package
   - Added a type check to make sure the argument is callable
+* decorator pattern
+  - made the code OO and added argument parsing
