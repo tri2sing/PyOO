@@ -6,20 +6,20 @@ The changes are not because I feel an example is inadequate for any reason.
 # Differences from the book
 This section provides some details about the changes that I made to the examples given in the book.
 The list below is in alphabetical order of the topic, and not in the order of implementation.
-* exception package
+* Exception package
   - Created independent modules for different components
-* decorator pattern
+* Decorator pattern
   - Made the code OO and added argument parsing
-* functions package
+* Functions package
   - Added a type check to make sure the argument is callable
-* inheritance package
+* Inheritance package
   - Did not make any changes
-* notebook package
+* Notebook package
   - Used inheritance in the menu class 
   - Used __str__ to display instance information
-* polymorphism package
+* Polymorphism package
   - Create independent module for different components
-* reuse package
+* Reuse package
   - Used abstract method in the inheritance version of reuse
-* strategy pattern 
+* Strategy pattern 
   - Added a new example as the book one was very long 
