@@ -1,12 +1,17 @@
 # Object Oriented Programming in Pyton 3.
 As I am reading the book and working through the examples, I take the liberty of modifying the code as I fancy.
-The goal of the changes is to learn by improving the example given, and not because I feel the example is inadequate for the purpose highlighted in the book.
+The goal of the changes is to learn by modifying the given example. 
+The changes are not because I feel an example is inadequate for any reason.
 
 # Differences from the book
-This section provides some details about the core changes I made.
-The list below is not in the order of implementation.
+This section provides some details about the changes that I made to the examples given in the book.
+The list below is in alphabetical order of the topic, and not in the order of implementation.
 * exception package
   - Created independent modules for different components
+* decorator pattern
+  - Made the code OO and added argument parsing
+* functions package
+  - Added a type check to make sure the argument is callable
 * inheritance package
   - Did not make any changes
 * notebook package
@@ -16,7 +21,5 @@ The list below is not in the order of implementation.
   - Create independent module for different components
 * reuse package
   - Used abstract method in the inheritance version of reuse
-* functions package
-  - Added a type check to make sure the argument is callable
-* decorator pattern
-  - made the code OO and added argument parsing
+* strategy pattern 
+  - Added a new example as the book one was very long 
