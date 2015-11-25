@@ -27,6 +27,8 @@ class SingletonOuter(object):
     def __getattr__(self, attr_name):
         '''
         Delegate all methods and variables to the inner class.
+        The __getattr__ uses dynamic dispatching, and helps avoid having to 
+        write a stub for every method of the inner class in the outer one.
         '''
         return getattr(self.instance, attr_name)        
     
