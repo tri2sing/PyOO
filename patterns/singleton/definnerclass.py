@@ -24,7 +24,13 @@ class SingletonOuter(object):
             SingletonOuter.instance.arg = arg
             print('Duplicate initialization')
                     
-
+    def __getattr__(self, attr_name):
+        '''
+        Delegate all methods and variables to the inner class.
+        '''
+        return getattr(self.instance, attr_name)        
+    
+    
 if __name__ == '__main__':
     x = SingletonOuter('Sameer')
     print('x = {}'.format(x))
