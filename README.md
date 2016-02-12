@@ -23,7 +23,7 @@ The list below is in alphabetical order of the topic, and not in the order they 
   - Used abstract method in the inheritance version of reuse
 * Strategy pattern 
   - Added a new example as the book one was very long 
-  - 
+
 # Mastering Object-Oriented Python - Steven Lott
 This section provides some details about the changes that I made to the examples given in the book.
 The list below is in alphabetical order of the topic, and not in the order they appear in the book.
